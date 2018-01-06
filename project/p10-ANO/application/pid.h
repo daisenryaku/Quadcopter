@@ -5,7 +5,7 @@
 typedef struct
 {
     float P, I, D;  // PID三个参数
-	float Desired;  // 期望
+    float Desired;  // 期望
     float Error;    // 误差
     float PreError; // 上一次误差
     float Integ;    // 积分值
@@ -18,10 +18,7 @@ typedef struct
 void PID_init(void);
 void CtrlAttiAng(void);
 void CtrlAttiRate(void);
-
-#if 0 //供扩展串级PID使用
-void PID_calculate(void);
-#endif
+void CtrlMotorSpeed(void);
 
 /* Exported variables --------------------------------------------------------*/
 extern PID_Typedef pitch_angle_PID; // pitch角度PID
